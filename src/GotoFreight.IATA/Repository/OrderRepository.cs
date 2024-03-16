@@ -140,12 +140,12 @@ public class OrderRepository
 
         if (request.StartTime.HasValue)
         {
-            builder.Where("CreateTime >= @StartTime", new { StartTime = request.StartTime.Value });
+            builder.Where("Departure >= @StartTime", new { StartTime = request.StartTime.Value });
         }
 
         if (request.EndTime.HasValue)
         {
-            builder.Where("CreateTime < @EndTime", new { EndTime = request.EndTime.Value });
+            builder.Where("Departure < @EndTime", new { EndTime = request.EndTime.Value });
         }
 
         var countTemplate = builder.AddTemplate(@"select count(*) from orders /**where**/");
