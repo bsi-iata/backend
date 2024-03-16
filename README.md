@@ -39,7 +39,7 @@ For example, the config.json file contains the following contents:
 Configuration description.
 
 * `UseAzureOpenAI` : If you are using Azure Open AI, turn this option on with a value of true or false.
-* `VersionPreviewDeploymentName`: An AI model with visual recognition,such as gpt-4-version-preview.
+* `VersionPreviewDeploymentName`: An AI model with visual recognition,such as gpt-4-vision-preview.
 * `ChatCompletionDeploymentName`: ChatCompletion AI model,such as gtp-4-32k.
 * `VersionPreviewMaxTokens` , `ChatCompletionMaxTokens`: max tokens.
 * `Server`: The service address of the program, when image detection, the picture needs to be stored in a static directory, and the url address of the picture is provided for the AI.
