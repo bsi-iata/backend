@@ -29,7 +29,7 @@ public class OrderService
     private string GenOrderCode()
     {
         var random = new Random();
-        return "BSI-" + DateTime.Now.ToString("HHmmssfff") + random.Next(1000, 10000);
+        return "BSI-" + DateTime.Now.ToString("HHmmss") + random.Next(1000, 10000);
     }
 
     private void FixOrderSubmitDto(OrderSubmitDto dto)

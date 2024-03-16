@@ -25,6 +25,6 @@ public class ContactDto
     // [Required(ErrorMessage = "Zip is required")]
     public string Zip { get; set; }
     
-    // [Required(ErrorMessage = "Address is required")]
+    [Required(ErrorMessage = "Address is required")]
     public string Address { get; set; }
 }

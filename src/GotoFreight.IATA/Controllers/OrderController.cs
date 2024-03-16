@@ -22,7 +22,7 @@ public class OrderController : BaseController
         return new UnifyResultDto(true, code);
     }
 
-    [HttpPost("{code}")]
+    [HttpDelete("{code}")]
     public async Task<UnifyResultDto> Remove(string code)
     {
         await _orderService.Remove(code);

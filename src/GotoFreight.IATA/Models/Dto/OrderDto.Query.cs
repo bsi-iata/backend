@@ -46,6 +46,14 @@ public class OrderInfo
 
     public int Status { get; set; }
 
+    public string DepartureAddress { get; set; }
+    
+    public DateTime Departure { get; set; }
+    
+    public string ArrivalAddress { get; set; }
+    
+    public DateTime Arrival { get; set; }
+    
     public DateTime CreateTime { get; set; }
 
     public DateTime UpdateTime { get; set; }
