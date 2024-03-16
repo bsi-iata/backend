@@ -1,0 +1,10 @@
+.idea/
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+/.vs/GotoFreight.IATA
+/.vs
+/src/GotoFreight.IATA/wwwroot/resource/*
+/src/GotoFreight.IATA/appsettings.Development.json

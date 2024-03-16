@@ -1,0 +1,20 @@
+﻿{
+  "UseAzureOpenAI": true,
+  "AzureOpenAI": {
+    "Endpoint": null,
+    "ApiKey": null,
+    "VersionPreviewDeploymentName": null,
+    "ChatCompletionDeploymentName": null,
+    "VersionPreviewMaxTokens": 2000,
+    "ChatCompletionMaxTokens": 1000
+  },
+  "OpenAI": {
+    "OpenAIApiKey": null,
+    "VersionPreviewDeploymentName": null,
+    "ChatCompletionDeploymentName": null,
+    "VersionPreviewMaxTokens": 2000,
+    "ChatCompletionMaxTokens": 1000,
+    "OpenAIOrgId": null
+  },
+  "Server": "http://192.168.196.166:5267/"
+}

@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>disable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <UserSecretsId>e5568fd6-cd2a-4f23-883e-0cb41f0668a8</UserSecretsId>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <DockerfileContext>..\..</DockerfileContext>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="13.0.1" />
+        <PackageReference Include="Dapper" Version="2.1.35" />
+        <PackageReference Include="Dapper.FluentMap" Version="2.0.0" />
+        <PackageReference Include="Dapper.SqlBuilder" Version="2.0.78" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
+        <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
+        <PackageReference Include="MySql.Data" Version="8.3.0" />
+        <PackageReference Include="Npgsql" Version="8.0.2" />
+        <PackageReference Include="NPOI" Version="2.6.2" />
+        <PackageReference Include="Scrutor" Version="4.2.2" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+		<PackageReference Include="Aliyun.OSS.SDK.NetCore" Version="2.13.0" />
+
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\GotoFreight.AICore\GotoFreight.AICore.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="wwwroot\resource\" />
+	</ItemGroup>
+
+</Project>

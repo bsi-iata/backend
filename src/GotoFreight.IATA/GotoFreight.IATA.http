@@ -1,0 +1,6 @@
+@GotoFreight.IATA_HostAddress = http://localhost:5267
+
+GET {{GotoFreight.IATA_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
