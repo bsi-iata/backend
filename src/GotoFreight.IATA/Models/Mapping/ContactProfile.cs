@@ -10,6 +10,7 @@ public class ContactProfile : Profile
     {
         CreateMap<ContactDto, Contact>()
             .ForMember(dest => dest.CreateTime, opt => opt.MapFrom(_ => DateTime.Now))
-            .ForMember(dest => dest.UpdateTime, opt => opt.MapFrom(_ => DateTime.Now));
+            .ForMember(dest => dest.UpdateTime, opt => opt.MapFrom(_ => DateTime.Now))
+            .ReverseMap();
     }
 }

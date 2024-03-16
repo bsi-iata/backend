@@ -36,9 +36,9 @@ public class OrderInfo
 
     public string Flight { get; set; }
 
-    public string Destination { get; set; }
+    public ContactDto Destination { get; set; }
 
-    public string Package { get; set; }
+    public PackageDto Package { get; set; }
 
     public string Goods { get; set; }
 

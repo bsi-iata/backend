@@ -29,7 +29,7 @@ public class OrderService
     private string GenOrderCode()
     {
         var random = new Random();
-        return "BSI-" + DateTime.Now.ToString("yyyyMMddHHmmssfff") + random.Next(1000, 10000);
+        return "BSI-" + DateTime.Now.ToString("HHmmssfff") + random.Next(1000, 10000);
     }
 
     private void FixOrderSubmitDto(OrderSubmitDto dto)
@@ -65,10 +65,10 @@ public class OrderService
             dto.Package.Remark = "important";
         }
 
-        if (string.IsNullOrWhiteSpace(dto.Package.GoodsDesc))
-        {
-            dto.Package.GoodsDesc = $"Goods count is: {dto.Goods.Count()}";
-        }
+        // if (string.IsNullOrWhiteSpace(dto.Package.GoodsDesc))
+        // {
+        //     dto.Package.GoodsDesc = $"Goods count is: {dto.Goods.Count()}";
+        // }
 
         foreach (var good in dto.Goods)
         {
@@ -151,10 +151,17 @@ public class OrderService
         }
 
         var (total, orders) = await _orderRepository.List(request);
+        var items = _mapper.Map<IEnumerable<OrderInfo>>(orders);
+        foreach (var item in items)
+        {
+            var order = orders.First(q => q.Code == item.NO);
+            item.Package = _mapper.Map<PackageDto>(order.Packages.First());
+            item.Destination = _mapper.Map<ContactDto>(order.Packages.First().Contact);
+        }
         return new OrderListResultDto
         {
             Total = total,
-            Items = _mapper.Map<IEnumerable<OrderInfo>>(orders)
+            Items = items
         };
     }
 }

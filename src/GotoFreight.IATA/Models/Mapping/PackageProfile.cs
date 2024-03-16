@@ -10,6 +10,7 @@ public class PackageProfile : Profile
     {
         CreateMap<PackageDto, Package>()
             .ForMember(dest => dest.CreateTime, opt => opt.MapFrom(_ => DateTime.Now))
-            .ForMember(dest => dest.UpdateTime, opt => opt.MapFrom(_ => DateTime.Now));
+            .ForMember(dest => dest.UpdateTime, opt => opt.MapFrom(_ => DateTime.Now))
+            .ReverseMap();
     }
 }
